@@ -18,7 +18,7 @@ var app = express();
 
 // Routes
 app.get('/', function (req, res) {
-  res.send('Hello World! [port' + this.address().port + ']');
+  res.send('Hello World! [Cloud and Ground]');
 });
 
 // Create the server
