@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: DevOps
+  name: jeromedevops
 spec:
   replicas: 1
   strategy:
@@ -16,17 +16,17 @@ spec:
     spec:
       containers:
       - name: pleungtestapp
-        image: jeromeacr.azurecr.io/jeromencl/DevOps:$BUILD_ID
+        image: docker.io/pleungdev/jeromedevops:$BUILD_ID
         ports:
         - containerPort: 16824
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: DevOps
+  name: jeromedevops
 spec:
   type: LoadBalancer
   ports:
   - port: 30080
   selector:
-    app: DevOps
+    app: jeromedevops
