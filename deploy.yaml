@@ -12,10 +12,10 @@ spec:
   template:
     metadata:
       labels:
-        app: DevOps
+        app: jeromedevops
     spec:
       containers:
-      - name: pleungtestapp
+      - name: jeromedevops
         image: docker.io/pleungdev/jeromedevops:$BUILD_ID
         ports:
         - containerPort: 30080
